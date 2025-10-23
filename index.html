@@ -1,178 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Sherly</title>
+    <title>Sherly Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-    <!-- Navigation -->
+    <!-- NAVIGATION -->
     <nav>
-        <div class="logo">Portofolio Sherly</div>
+        <div class="logo">Portfolio</div>
         <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contacts">Contacts</a></li>
         </ul>
+        <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+        <script>
+            const toggle = document.getElementById('dark-mode-toggle');
+            toggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+            });
+        </script>
     </nav>
 
-    <!-- Home Section -->
     <section id="home" class="home">
-        <div class="content">
-            <h1>Welcome to My Portfolio</h1>
-            <p>This is Sherly's Personal Website</p>
+        <div class="home-container">
+            <div class="home-text">
+                <h1>Hello, I'm Sherly</h1>
+                <p>a 5th-semester IT student at Tarumanagara University</p>
+                <a href="#contacts" class="btn">Contact Me</a>
+            </div>
             <div class="profile-image-container">
-                <img src="profile.jpg" alt="Sherly's Photo">
+                <img src="images/profile.jpg" alt="Sherly's Photo">
             </div>
         </div>
     </section>
-    
 
-    <!-- About Section -->
+    <!-- ABOUT -->
     <section id="about" class="about">
-        <div class="about-container">
-            <h2 class="about-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Halo! Nama saya Sherly, seorang mahasiswa Teknik Informatika di Universitas Tarumanagara. Saya memiliki minat yang mendalam di bidang pengembangan web dan desain, terutama dalam menciptakan situs yang ramah pengguna dan visual yang menarik. Saya memiliki pengalaman dalam mengerjakan berbagai proyek, mulai dari portofolio pribadi hingga proyek tim kolaboratif. Dengan keterampilan yang mencakup HTML, CSS, JavaScript, serta berbagai framework front-end, saya selalu berusaha untuk menciptakan solusi yang inovatif dan efisien.
-                    </p>
-                    <p>
-                        Di luar kegiatan akademik, saya aktif terlibat dalam berbagai UKM dan kepanitiaan di kampus. Saya menikmati bekerja dalam tim dan berkolaborasi dengan individu yang memiliki visi serupa, terutama dalam inisiatif teknologi. Melalui keterlibatan ini, saya telah mengasah keterampilan kepemimpinan dan kerja sama, yang sangat membantu dalam menangani proyek yang kompleks.
-                    </p>
-                    <p>
-                        Selain dunia teknologi, saya juga memiliki hobi menjelajahi tempat-tempat baru, mencoba resep-resep masakan, dan menyalurkan kreativitas melalui berbagai kegiatan seni. Saya percaya bahwa pembelajaran harus dilakukan secara berkelanjutan, dan saya selalu berusaha untuk mengikuti perkembangan terbaru dalam dunia teknologi dan desain web yang terus berkembang.
-                    </p>
-                    <p>
-                        Jika Anda tertarik untuk mengetahui lebih lanjut tentang karya saya atau ingin berkolaborasi dalam sebuah proyek, jangan ragu untuk menghubungi saya. Saya selalu bersemangat untuk terhubung dengan orang-orang baru dan mengeksplorasi peluang baru!
-                    </p>
-                </div>
-            </div>
+        <h2>About Me</h2>
+        <p>Hi! I'm Sherly, a 5th-semester IT student at Tarumanagara University.
+            I actively participate in university events and volunteer programs like Fantasi Tuli, Polarisasi Musikal, and Lead
+            The Fest.
+            I enjoy developing websites and applications, with experience in HTML, CSS, JavaScript, Python, C++, and Flutter.
+            I’m passionate about learning new technologies and creating projects that are both functional and visually
+            appealing.</p>
+
+        <div class="soft-skills">
+            <span>Teamwork</span>
+            <span>Leadership</span>
+            <span>Problem Solving</span>
+            <span>Creativity</span>
         </div>
     </section>
-    
-     <!-- Skills Section -->
-     <section id="skills" class="skills">
-        <h2>Skills</h2>
+
+    <!-- SKILLS -->
+    <section id="skills" class="about">
+        <h2>My Skills</h2>
         <div class="skills-container">
             <div class="skill">
-                <h3>HTML & CSS</h3>
+                <h3>Mobile App</h3>
                 <div class="progress-bar">
                     <div class="progress html-css"></div>
                 </div>
             </div>
             <div class="skill">
-                <h3>JavaScript</h3>
+                <h3>Interactive Web</h3>
                 <div class="progress-bar">
                     <div class="progress javascript"></div>
                 </div>
             </div>
             <div class="skill">
-                <h3>Cpp</h3>
+                <h3>Software Development</h3>
                 <div class="progress-bar">
-                    <div class="progress Cpp"></div>
+                    <div class="progress cpp"></div>
                 </div>
             </div>
             <div class="skill">
-                <h3>Python</h3>
+                <h3>Data Analysis</h3>
                 <div class="progress-bar">
                     <div class="progress python"></div>
                 </div>
             </div>
             <div class="skill">
-                <h3>PHP</h3>
+                <h3>Microsoft Office</h3>
                 <div class="progress-bar">
-                    <div class="progress PHP"></div>
+                    <div class="progress office"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>Design Graphic</h3>
+                <div class="progress-bar">
+                    <div class="progress uiux"></div>
                 </div>
             </div>
         </div>
     </section>
-    
-<!-- Education Section -->
-<section id="education" class="education">
-    <div class="container">
+
+    <!-- EDUCATION -->
+    <section id="education" class="about">
         <h2>Education</h2>
-        <div class="education-item">
-            <div class="education-logo">
-                <img src="slamer.png" alt="SMP IGN Slamet Riyadi Logo">
+        <div class="accordion">
+            <div class="accordion-item">
+                <button>SMP IGN Slamet Riyadi (2017-2020)</button>
+                <div class="accordion-content">
+                    <p>Executive board of Student Council (OSIS), Led youth scientific group (KIR), secretary of scouting council, and other school activities.</p>
+                </div>
             </div>
-            <div class="education-details">
-                <h3>SMP IGN Slamet Riyadi</h3>
-                <p>(2017-2020)</p>
+            <div class="accordion-item">
+                <button>SMAN 98 Jakarta Timur (2020-2023)</button>
+                <div class="accordion-content">
+                    <p>Executive board of Student Council (OSIS), Badminton Club Treasurer, Jaya Sakti Flag Raising
+                        Committee coordinator and other school activities.</p>
+                </div>
             </div>
-            <div class="education-line"></div>
-        </div>
-        <div class="education-item">
-            <div class="education-logo">
-                <img src="sman 98.png" alt="SMAN 98 Logo">
-            </div>
-            <div class="education-details">
-                <h3>SMAN 98 Jakarta Timur</h3>
-                <p>(2020-2023)</p>
-            </div>
-            <div class="education-line"></div>
-        </div>
-        <div class="education-item">
-            <div class="education-logo">
-                <img src="untar.png" alt="Universitas Tarumanagara Logo">
-            </div>
-            <div class="education-details">
-                <h3>Universitas Tarumanagara</h3>
-                <p>(2023-Present)</p>
+            <div class="accordion-item">
+                <button>Universitas Tarumanagara (2023-Present)</button>
+                <div class="accordion-content">
+                    <p>Internship as Personal Assistant to the Dean, active in photography association, event
+                        committees, and student elections.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Experience Section -->
-<section id="experience" class="experience">
-    <div class="experience-container">
+    <!-- EXPERIENCE -->
+    <section id="experience" class="about">
         <h2>Experience</h2>
-        <div class="experience-list">
-            <div class="experience-item">
-                <div class="experience-logo">
-                </div>
-                <div class="experience-details">
-                    <h3>Registration Team Volunteer Lead The Flag 2024, Lead The Fest</h3>
-                    <p><strong>Location:</strong> Jakarta Pusat, Indonesia</p>
-                    <p><strong>Duration:</strong> 31 Juli 2024 - 18 Agustus 2024</p>
-                </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span>Jan 2025 - Present</span>
+                <h3>Personal Assistant to the Dean | Faculty of Medicine</h3>
+                <p>Preparing invitations, managing correspondence, coordinating meetings and schedules.</p>
             </div>
-        <div class="experience-list">
-            <div class="experience-item">
-                <div class="experience-logo">
-                </div>
-                <div class="experience-details">
-                    <h3>Cash & Manager & Finance Volunteer Senandung Senyap 2024, Fantasi Tuli</h3>
-                    <p><strong>Location:</strong> Jakarta Selatan, Indonesia</p>
-                    <p><strong>Duration:</strong> 20 Agustus 2024 - Now</p>
-                </div>
+            <div class="timeline-item">
+                <span>2024</span>
+                <h3>Event Volunteer | Lead The Fest, Fantasi Tuli, Polarisasi Musikal</h3>
+                <p>Handling registration, finance, usher, and event coordination duties.</p>
             </div>
+            <div class="timeline-item">
+                <span>2024 - Present</span>
+                <h3>Event Campus | PFT, PEMIRA, AdHoc, FTI Open House</h3>
+                <p>Handling registration, finance, usher, and event coordination duties.</p>
+            </div>
+            
         </div>
-    </div>
-</section>
+    </section>
+        
+    <!-- Volunteer Carousel -->
+    <section id="Volunteer Activities" class="about">
+        <h2>Volunteer Activities</h2>
+        <div class="volunteer-carousel">
+            <button class="prev">&#10094;</button>
+            <div class="carousel-slide">
+                <img src="images/polarisasi.jpg" alt="Polarisasi" class="active">
+                <img src="images/polarisasimusikal.jpg" alt="Polarisasi Musikal">
+                <img src="images/fantasituli.jpg" alt="Fantasi Tuli">
+                <img src="images/fantasi.jpg" alt="Fantasi">
+                <img src="images/leadthefest.jpg" alt="Lead The Fest">
+                <img src="images/lead.jpg" alt="Lead">
+                <img src="images/pft.jpg" alt="PFT">
+                <img src="images/pemira.jpg" alt="Pemira">
+                <img src="images/pemiraa.jpg" alt="Pemiraa">
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
 
-    <!-- Contact Section -->
-    <footer>
-        <h3>Contacts</h3>
-        <div class="contact-info">
-            <a href="tel:087785137559" class="contact-item">
-                <i class="fas fa-phone-alt"></i>
-            </a>
-            <a href="mailto:sherlyolivia306@gmail.com" class="contact-item">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://instagram.com/sherlyviia" target="_blank" class="contact-item">
-                <i class="fab fa-instagram"></i>
-            </a>
+    <!-- PROJECTS -->
+    <section id="projects" class="about">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/web_lifestyle.png" alt="Lifestyle Website">
+                </div>
+                <div class="project-content">
+                    <h3>Lifestyle Website</h3>
+                    <p>A responsive website about healthy living — includes fitness, nutrition, and style tips.</p>
+                </div>
+                <a href="https://github.com/syrlvx/UAS-Front-End" target="_blank" class="btn github-btn">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/web_kesehatan.png" alt="Health Website">
+                </div>
+                <div class="project-content">
+                    <h3>Health Website</h3>
+                    <p>A responsive website about nutrition, BMI, and healthy lifestyle tips.</p>
+                </div>
+                <a href="https://github.com/syrlvx/UAS-Front-End" target="_blank" class="btn github-btn">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/cuplix.png" alt="Netflix Clone App">
+                </div>
+                <div class="project-content">
+                    <h3>Netflix Clone App (CUPLIX)</h3>
+                    <p>A mobile app made with Flutter mimicking Netflix interface and streaming features.</p>
+                </div>
+                <a href="https://github.com/syrlvx/UAS-Mobile-Programming" target="_blank" class="btn github-btn">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/purelux.jpg" alt="Employee Attendance App">
+                </div>
+                <div class="project-content">
+                    <h3>Employee Attendance & Laundry App (PURELUX)</h3>
+                    <p>Flutter app for employee attendance and laundry management system with Firebase integration.</p>
+                </div>
+                <a href="https://github.com/syrlvx/UAS-SoftDev" target="_blank" class="btn github-btn">View on
+                    GitHub</a>
+            </div>
         </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contacts" class="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><i class="fas fa-phone-alt"></i>
+                    <a href="https://wa.me/6287785137559" target="_blank">087785137559</a>
+                </p>
+                <p><i class="fas fa-envelope"></i>
+                    <a href="mailto:sherlyolivia306@gmail.com">sherlyolivia306@gmail.com</a>
+                </p>
+                <p><i class="fas fa-map-marker-alt"></i>Perumahan Lembah Nirmala 2, Blok E No.8, Depok
+                </p>
+                <p><i class="fab fa-github"></i>
+                    <a href="https://github.com/syrlvx" target="_blank">GitHub Profile</a>
+                </p>
+                <p><i class="fab fa-linkedin"></i>
+                    <a href="www.linkedin.com/in/sherly-776979220" target="_blank">LinkedIn Profile</a>
+                </p>
+                <p><i class="fab fa-instagram"></i>
+                    <a href="https://www.instagram.com/sherlyviia" target="_blank">Sherlyviia</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Sherly. All rights reserved.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
+
 </html>
