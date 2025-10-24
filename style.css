@@ -85,6 +85,24 @@ nav ul li a:hover::after {
     width: 0;
 }
 
+/* Kontainer untuk menu dan tombol dark mode */
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    /* Pindahkan gap 150px ke sini */
+}
+
+/* Tombol hamburger (sembunyi di desktop) */
+#mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 /* Dark Mode Nav */
 body.dark-mode nav {
     background: linear-gradient(90deg, #333, #111);
@@ -235,7 +253,7 @@ body.dark-mode .btn {
     color: #ffffff;
 }
 
-#dark-mode-toggle {
+.toggle-theme {
     background: transparent;
     border: none;
     color: #fff;
@@ -244,7 +262,7 @@ body.dark-mode .btn {
     transition: 0.3s;
 }
 
-#dark-mode-toggle:hover {
+.toggle-theme:hover {
     transform: scale(1.2);
 }
 
@@ -302,36 +320,44 @@ body.dark-mode .soft-skills span {
 .progress {
     height: 100%;
     border-radius: 10px;
+    transition: width 0.8s ease;
+    /* <-- TAMBAHKAN INI UNTUK ANIMASI */
 }
 
 /* contoh warna progres */
 .html-css {
-    width: 90%;
+    width: 0%;
+    /* <-- UBAH JADI 0% */
     background-color: #f16529;
 }
 
 .javascript {
-    width: 80%;
+    width: 0%;
+    /* <-- UBAH JADI 0% */
     background-color: #f7df1e;
 }
 
 .cpp {
-    width: 75%;
+    width: 0%;
+    /* <-- UBAH JADI 0% */
     background-color: #00599c;
 }
 
 .python {
-    width: 85%;
+    width: 0%;
+    /* <-- UBAH JADI 0% */
     background-color: #3776ab;
 }
 
 .office {
-    width: 95%;
+    width: 0%;
+    /* <-- UBAH JADI 0% */
     background-color: #0078d4;
 }
 
 .uiux {
-    width: 70%;
+    width: 0%;
+    /* <-- UBAH JADI 0% */
     background-color: #e91e63;
 }
 
@@ -802,4 +828,185 @@ section {
     /* konten di tengah vertikal */
     scroll-margin-top: 65px;
     /* ganti 70 sesuai tinggi navbar */
+}
+
+/* =================================
+   10. Mobile Responsiveness
+================================= */
+@media (max-width: 768px) {
+
+    /* --- General & Section --- */
+    body {
+        /* Sedikit kecilkan font dasar di mobile */
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        height: auto !important;
+        padding: 60px 20px;
+        /* Kurangi padding di mobile */
+    }
+
+    /* --- Navigation (Nav) --- */
+        /* --- Navigation (Nav) --- */
+        nav {
+            flex-direction: row;
+            /* Ubah dari column ke row */
+            justify-content: space-between;
+            /* Logo di kiri, ikon di kanan */
+            padding: 20px 25px;
+            /* Sesuaikan padding */
+            /* Hapus gap dan align-items dari aturan lama Anda */
+        }
+    
+        /* Tampilkan tombol hamburger di mobile */
+        #mobile-menu-toggle {
+            display: block;
+        }
+    
+        /* Sembunyikan kontainer menu di mobile */
+        .nav-items {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 75px;
+            /* Sesuaikan ini (tinggi navbar Anda) */
+            left: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #c8116f, #680f38);
+            padding: 20px 0;
+            gap: 25px;
+            /* Jarak antara UL dan tombol dark mode */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    
+        /* Class "show" ini akan ditambahkan oleh JavaScript untuk menampilkan menu */
+        .nav-items.show {
+            display: flex;
+        }
+    
+        /* Atur menu UL di dalam kontainer */
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            gap: 15px;
+            margin: 0;
+            width: 100%;
+        }
+    
+        nav ul li {
+            margin-left: 0;
+        }
+    
+        /* Atur tombol dark mode agar di tengah */
+        .toggle-theme {
+            margin: 0 auto;
+        }
+    
+        /* Perbaiki style dark-mode untuk menu mobile */
+        body.dark-mode .nav-items {
+            background: linear-gradient(90deg, #333, #111);
+        }
+
+    /* --- Home Section --- */
+    section#home {
+        /* Biarkan home tetap tinggi, tapi 'auto' agar bisa tumbuh */
+        min-height: 80vh;
+        height: auto !important;
+        padding: 40px 20px;
+    }
+
+    .home-container {
+        flex-direction: column-reverse;
+        /* Balik urutan: Foto di atas, teks di bawah */
+        gap: 30px;
+        width: 100%;
+    }
+
+    .home-text {
+        text-align: center;
+        /* Teks jadi di tengah */
+    }
+
+    .profile-image-container {
+        width: 200px;
+        /* Kecilkan foto profil */
+        height: 200px;
+    }
+
+    /* --- Skills Section --- */
+    .skills-container {
+        width: 95%;
+        /* Lebarkan kontainer skill */
+    }
+
+    .skill {
+        flex-direction: column;
+        /* Susun judul skill & bar ke bawah */
+        align-items: flex-start;
+        /* Rata kiri */
+        gap: 10px;
+    }
+
+    .skill h3 {
+        width: auto;
+        /* Hapus lebar kaku 150px */
+    }
+
+    /* --- Experience & Projects --- */
+    .timeline-item,
+    .project-card {
+        width: 90%;
+        /* Buat kartu jadi lebih lebar */
+        max-width: 400px;
+        /* Batas maksimum agar tidak terlalu lebar di tablet */
+    }
+
+    .projects-container {
+        gap: 20px;
+    }
+
+    /* --- Volunteer Carousel --- */
+    .volunteer-carousel {
+        height: 250px;
+        /* Kecilkan tinggi carousel */
+    }
+
+    /* Override !important dari kode asli Anda */
+    .carousel-slide img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    /* --- Contact Section --- */
+    .contact-container {
+        flex-direction: column;
+        /* Susun info kontak & form ke bawah */
+        align-items: center;
+        /* Posisikan di tengah */
+        gap: 30px;
+    }
+
+    .contact-info,
+    form {
+        flex: none;
+        /* Hapus flex-grow */
+        width: 95%;
+        /* Lebarkan form & info */
+        max-width: 400px;
+    }
+
+    .contact-info {
+        align-items: flex-start;
+        /* Jaga agar ikon & teks tetap rata kiri */
+    }
 }

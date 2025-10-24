@@ -11,8 +11,10 @@
 
 <body>
     <!-- NAVIGATION -->
-    <nav>
-        <div class="logo">Portfolio</div>
+<nav>
+    <div class="logo">Portfolio</div>
+
+    <div class="nav-items" id="nav-items-container">
         <ul>
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -22,14 +24,13 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contacts">Contacts</a></li>
         </ul>
-        <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
-        <script>
-            const toggle = document.getElementById('dark-mode-toggle');
-            toggle.addEventListener('click', () => {
-                document.body.classList.toggle('dark-mode');
-            });
-        </script>
-    </nav>
+        <button class="toggle-theme"><i class="fas fa-moon"></i></button>
+    </div>
+
+    <button id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
 
     <section id="home" class="home">
         <div class="home-container">
@@ -187,7 +188,7 @@
                     <h3>Lifestyle Website</h3>
                     <p>A responsive website about healthy living — includes fitness, nutrition, and style tips.</p>
                 </div>
-                <a href="https://github.com/syrlvx/UAS-Front-End" target="_blank" class="btn github-btn">View on GitHub</a>
+                <a href="https://github.com/syrlvx/tugas-front-end" target="_blank" class="btn github-btn">View on GitHub</a>
             </div>
             <div class="project-card">
                 <div class="project-image">
