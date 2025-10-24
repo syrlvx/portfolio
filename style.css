@@ -17,7 +17,6 @@ body.dark-mode {
     color: #e0e0e0;
 }
 
-/* Links */
 a {
     text-decoration: none;
     color: inherit;
@@ -63,13 +62,11 @@ nav ul li a {
     padding: 8px 0;
 }
 
-/* Hover: hanya teks yang membesar */
 nav ul li a:hover {
     transform: scale(1.15);
     color: #ffe6f1;
 }
 
-/* Garis bawah hanya untuk ACTIVE */
 nav ul li a.active::after {
     content: "";
     position: absolute;
@@ -80,20 +77,16 @@ nav ul li a.active::after {
     bottom: -5px;
 }
 
-/* Tidak ada underline saat hover */
 nav ul li a:hover::after {
     width: 0;
 }
 
-/* Kontainer untuk menu dan tombol dark mode */
 .nav-items {
     display: flex;
     align-items: center;
     gap: 150px;
-    /* Pindahkan gap 150px ke sini */
 }
 
-/* Tombol hamburger (sembunyi di desktop) */
 #mobile-menu-toggle {
     display: none;
     background: none;
@@ -115,6 +108,7 @@ body.dark-mode nav ul li a {
 body.dark-mode nav ul li a.active::after {
     background: #e0e0e0;
 }
+
 /* ========================
    3. Home Section
 ======================== */
@@ -211,7 +205,8 @@ body.dark-mode .home::after {
 }
 
 body.dark-mode .btn {
-    background: #333;;
+    background: #333;
+    ;
 }
 
 /* ========================
@@ -228,7 +223,7 @@ body.dark-mode .btn {
     color: #c8116f;
     margin-top: 10px;
     margin-bottom: 50px;
-        text-align: top center;
+    text-align: top center;
 }
 
 .about h3 {
@@ -271,6 +266,7 @@ body.dark-mode .about {
     background: #1e1e1e;
     color: #e0e0e0;
 }
+
 body.dark-mode .about h2 {
     color: #e0e0e0;
 }
@@ -294,23 +290,18 @@ body.dark-mode .soft-skills span {
 .skill {
     display: flex;
     align-items: center;
-    /* sejajarkan vertikal */
     justify-content: space-between;
-    /* bisa ubah ke flex-start kalau mau kiri semua */
     gap: 20px;
 }
 
 .skill h3 {
     width: 150px;
-    /* biar semua teks punya lebar sama */
     text-align: left;
-    /* rata kiri biar rapi */
     margin: 0;
 }
 
 .progress-bar {
     flex: 1;
-    /* supaya bar menyesuaikan sisa ruang */
     height: 12px;
     background-color: #ddd;
     border-radius: 10px;
@@ -321,43 +312,35 @@ body.dark-mode .soft-skills span {
     height: 100%;
     border-radius: 10px;
     transition: width 0.8s ease;
-    /* <-- TAMBAHKAN INI UNTUK ANIMASI */
 }
 
-/* contoh warna progres */
 .html-css {
     width: 0%;
-    /* <-- UBAH JADI 0% */
     background-color: #f16529;
 }
 
 .javascript {
     width: 0%;
-    /* <-- UBAH JADI 0% */
     background-color: #f7df1e;
 }
 
 .cpp {
     width: 0%;
-    /* <-- UBAH JADI 0% */
     background-color: #00599c;
 }
 
 .python {
     width: 0%;
-    /* <-- UBAH JADI 0% */
     background-color: #3776ab;
 }
 
 .office {
     width: 0%;
-    /* <-- UBAH JADI 0% */
     background-color: #0078d4;
 }
 
 .uiux {
     width: 0%;
-    /* <-- UBAH JADI 0% */
     background-color: #e91e63;
 }
 
@@ -440,15 +423,18 @@ body.dark-mode .timeline-item {
     box-sizing: border-box;
 }
 
+/* Dark Mode Accordion */
 body.dark-mode .accordion-item button {
     background: #2a2a2a !important;
     color: #e0e0e0 !important;
 }
 
+/* Dark Mode Accordion */
 body.dark-mode .accordion-content {
-    background: #333!important;
-    color: rgb(255, 255, 255)!important;
+    background: #333 !important;
+    color: black !important;
 }
+
 /* ========================
    8. Contact Section
 ======================== */
@@ -547,13 +533,14 @@ button[type="submit"]:hover {
 
 /* Dark Mode Contact */
 body.dark-mode .contact {
-    background: #1e1e1e!important;
+    background: #1e1e1e !important;
 }
+
 body.dark-mode .contact h2 {
     color: #e0e0e0;
 }
 
-body.dark-mode .contact p{
+body.dark-mode .contact p {
     color: #e0e0e0 !important;
 }
 
@@ -568,7 +555,7 @@ body.dark-mode a {
 body.dark-mode input,
 body.dark-mode textarea {
     background: #2a2a2a;
-    color: #e0e0e0!important;
+    color: #e0e0e0 !important;
     border: 1px solid #555;
 }
 
@@ -785,6 +772,7 @@ body.dark-mode .contact {
     background-color: #1a1a1a;
     color: white;
 }
+
 /* ========================
    Section Background Alternating
 ======================== */
@@ -796,6 +784,7 @@ section:nth-of-type(even) {
     background-color: rgba(240, 240, 240, 0.7);
 }
 
+/* Dark Mode Alternating */
 body.dark-mode section:nth-of-type(odd) {
     background-color: rgba(26, 26, 26, 0.95);
 }
@@ -816,6 +805,8 @@ section {
    10. Mobile Responsiveness
 ================================= */
 @media (max-width: 768px) {
+
+    /* --- General & Section --- */
     body {
         font-size: 14px;
     }
@@ -834,53 +825,54 @@ section {
     }
 
     /* --- Navigation (Nav) --- */
-        nav {
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 20px 25px;
-        }
-    
-        #mobile-menu-toggle {
-            display: block;
-        }
-    
-        .nav-items {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 75px;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(90deg, #c8116f, #680f38);
-            padding: 20px 0;
-            gap: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-    
-        .nav-items.show {
-            display: flex;
-        }
-    
-        nav ul {
-            flex-direction: column;
-            align-items: center;
-            padding: 0;
-            gap: 15px;
-            margin: 0;
-            width: 100%;
-        }
-    
-        nav ul li {
-            margin-left: 0;
-        }
-    
-        .toggle-theme {
-            margin: 0 auto;
-        }
-    
-        body.dark-mode .nav-items {
-            background: linear-gradient(90deg, #333, #111);
-        }
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 25px;
+    }
+
+    #mobile-menu-toggle {
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(90deg, #c8116f, #680f38);
+        padding: 20px 0;
+        gap: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-items.show {
+        display: flex;
+    }
+
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 15px;
+        margin: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+
+    .toggle-theme {
+        margin: 0 auto;
+    }
+
+    body.dark-mode .nav-items {
+        background: linear-gradient(90deg, #333, #111);
+    }
 
     /* --- Home Section --- */
     section#home {
@@ -940,7 +932,6 @@ section {
         height: 100% !important;
     }
 
-    /* --- Contact Section --- */
     .contact-container {
         flex-direction: column;
         align-items: center;
@@ -956,5 +947,54 @@ section {
 
     .contact-info {
         align-items: flex-start;
+    }
+}
+
+/* ==============================
+   Responsive Fix for Skills Section
+============================== */
+@media (max-width: 768px) {
+    .skills-container {
+        width: 90%;
+        gap: 25px;
+    }
+
+    .skill {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .skill h3 {
+        width: 100%;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    .progress-bar {
+        width: 100%;
+        height: 10px;
+    }
+
+    .progress {
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        width: 95%;
+    }
+
+    .skill h3 {
+        font-size: 0.95rem;
+    }
+
+    .progress-bar {
+        height: 8px;
+    }
+
+    .progress {
+        height: 8px;
     }
 }
