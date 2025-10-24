@@ -408,15 +408,12 @@ body.dark-mode .timeline-item {
 .accordion {
     max-width: 800px;
     width: 100%;
-    /* tambahkan ini agar selalu konsisten */
     margin: 0 auto;
     box-sizing: border-box;
-    /* pastikan padding tidak menambah ukuran */
 }
 
 .accordion-item {
     width: 100%;
-    /* pastikan item ikut menyesuaikan */
 }
 
 .accordion-item button {
@@ -436,7 +433,6 @@ body.dark-mode .timeline-item {
 
 .accordion-content {
     width: 100%;
-    /* tambahkan ini biar lebarnya sama */
     padding: 15px;
     background: #f9f9f9;
     display: none;
@@ -444,16 +440,14 @@ body.dark-mode .timeline-item {
     box-sizing: border-box;
 }
 
-/* Dark Mode Accordion */
 body.dark-mode .accordion-item button {
     background: #2a2a2a !important;
     color: #e0e0e0 !important;
 }
 
-/* Dark Mode Accordion */
 body.dark-mode .accordion-content {
     background: #333!important;
-    color: black!important;
+    color: rgb(255, 255, 255)!important;
 }
 /* ========================
    8. Contact Section
@@ -656,9 +650,7 @@ footer {
     background: #680f38;
     color: #fff;
     margin-top: 0;
-    /* hilangkan jarak atas */
     border-top: none;
-    /* biar benar-benar nempel */
 }
 
 /* Dark Mode Footer */
@@ -719,15 +711,12 @@ body.dark-mode footer {
     font-size: 14px;
 }
 
-/* Tombol GitHub di bawah tengah card */
 .github-btn {
     display: block;
     margin: 0 auto 15px auto;
     padding: 10px 20px;
     background-color: #c8116f;
-    /* warna pink */
     color: #fff;
-    /* teks putih */
     text-decoration: none;
     font-weight: 600;
     border-radius: 5px;
@@ -762,7 +751,6 @@ body.dark-mode .project-card {
 
 body.dark-mode .project-content h3 {
     color: white !important;
-    /* warna pink lebih lembut */
 }
 
 body.dark-mode .project-content p {
@@ -802,15 +790,12 @@ body.dark-mode .contact {
 ======================== */
 section:nth-of-type(odd) {
     background-color: rgba(255, 255, 255, 0.95);
-    /* putih sedikit transparan */
 }
 
 section:nth-of-type(even) {
     background-color: rgba(240, 240, 240, 0.7);
-    /* abu transparan */
 }
 
-/* Dark Mode Alternating */
 body.dark-mode section:nth-of-type(odd) {
     background-color: rgba(26, 26, 26, 0.95);
 }
@@ -821,23 +806,17 @@ body.dark-mode section:nth-of-type(even) {
 
 section {
     height: 68vh;
-    /* tinggi sesuai viewport */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* konten di tengah vertikal */
     scroll-margin-top: 65px;
-    /* ganti 70 sesuai tinggi navbar */
 }
 
 /* =================================
    10. Mobile Responsiveness
 ================================= */
 @media (max-width: 768px) {
-
-    /* --- General & Section --- */
     body {
-        /* Sedikit kecilkan font dasar di mobile */
         font-size: 14px;
     }
 
@@ -852,48 +831,36 @@ section {
     section {
         height: auto !important;
         padding: 60px 20px;
-        /* Kurangi padding di mobile */
     }
 
     /* --- Navigation (Nav) --- */
-        /* --- Navigation (Nav) --- */
         nav {
             flex-direction: row;
-            /* Ubah dari column ke row */
             justify-content: space-between;
-            /* Logo di kiri, ikon di kanan */
             padding: 20px 25px;
-            /* Sesuaikan padding */
-            /* Hapus gap dan align-items dari aturan lama Anda */
         }
     
-        /* Tampilkan tombol hamburger di mobile */
         #mobile-menu-toggle {
             display: block;
         }
     
-        /* Sembunyikan kontainer menu di mobile */
         .nav-items {
             display: none;
             flex-direction: column;
             position: absolute;
             top: 75px;
-            /* Sesuaikan ini (tinggi navbar Anda) */
             left: 0;
             width: 100%;
             background: linear-gradient(90deg, #c8116f, #680f38);
             padding: 20px 0;
             gap: 25px;
-            /* Jarak antara UL dan tombol dark mode */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
     
-        /* Class "show" ini akan ditambahkan oleh JavaScript untuk menampilkan menu */
         .nav-items.show {
             display: flex;
         }
     
-        /* Atur menu UL di dalam kontainer */
         nav ul {
             flex-direction: column;
             align-items: center;
@@ -907,19 +874,16 @@ section {
             margin-left: 0;
         }
     
-        /* Atur tombol dark mode agar di tengah */
         .toggle-theme {
             margin: 0 auto;
         }
     
-        /* Perbaiki style dark-mode untuk menu mobile */
         body.dark-mode .nav-items {
             background: linear-gradient(90deg, #333, #111);
         }
 
     /* --- Home Section --- */
     section#home {
-        /* Biarkan home tetap tinggi, tapi 'auto' agar bisa tumbuh */
         min-height: 80vh;
         height: auto !important;
         padding: 40px 20px;
@@ -927,48 +891,39 @@ section {
 
     .home-container {
         flex-direction: column-reverse;
-        /* Balik urutan: Foto di atas, teks di bawah */
         gap: 30px;
         width: 100%;
     }
 
     .home-text {
         text-align: center;
-        /* Teks jadi di tengah */
     }
 
     .profile-image-container {
         width: 200px;
-        /* Kecilkan foto profil */
         height: 200px;
     }
 
     /* --- Skills Section --- */
     .skills-container {
         width: 95%;
-        /* Lebarkan kontainer skill */
     }
 
     .skill {
         flex-direction: column;
-        /* Susun judul skill & bar ke bawah */
         align-items: flex-start;
-        /* Rata kiri */
         gap: 10px;
     }
 
     .skill h3 {
         width: auto;
-        /* Hapus lebar kaku 150px */
     }
 
     /* --- Experience & Projects --- */
     .timeline-item,
     .project-card {
         width: 90%;
-        /* Buat kartu jadi lebih lebar */
         max-width: 400px;
-        /* Batas maksimum agar tidak terlalu lebar di tablet */
     }
 
     .projects-container {
@@ -978,10 +933,8 @@ section {
     /* --- Volunteer Carousel --- */
     .volunteer-carousel {
         height: 250px;
-        /* Kecilkan tinggi carousel */
     }
 
-    /* Override !important dari kode asli Anda */
     .carousel-slide img {
         width: 100% !important;
         height: 100% !important;
@@ -990,23 +943,18 @@ section {
     /* --- Contact Section --- */
     .contact-container {
         flex-direction: column;
-        /* Susun info kontak & form ke bawah */
         align-items: center;
-        /* Posisikan di tengah */
         gap: 30px;
     }
 
     .contact-info,
     form {
         flex: none;
-        /* Hapus flex-grow */
         width: 95%;
-        /* Lebarkan form & info */
         max-width: 400px;
     }
 
     .contact-info {
         align-items: flex-start;
-        /* Jaga agar ikon & teks tetap rata kiri */
     }
 }

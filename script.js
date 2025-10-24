@@ -24,11 +24,9 @@ window.addEventListener('scroll', () => {
 // --- 2. Event untuk Menutup Menu Saat Link di-Klik (KODE BARU) ---
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        // Cek jika menu sedang terbuka (punya class 'show')
         if (navItems && navItems.classList.contains('show')) {
             navItems.classList.remove('show');
 
-            // Kembalikan ikon hamburger
             const icon = menuToggle.querySelector('i');
             if (icon) {
                 icon.classList.add('fa-bars');
@@ -60,26 +58,20 @@ if (toggleTheme) {
     });
 }
 
-// Animate progress bars on scroll (VERSI BARU YANG BENAR)
 const skillsSectionForAnimation = document.getElementById('skills');
 const allProgressBarsForAnimation = document.querySelectorAll('.progress');
-let animationHasRun = false; // Flag agar animasi cuma jalan sekali
+let animationHasRun = false; 
 
-// Buat fungsi terpisah untuk mengecek
 function runSkillAnimation() {
-    // Jaga-jaga kalau elemen #skills tidak ketemu
     if (!skillsSectionForAnimation) return; 
 
     const triggerBottom = window.innerHeight * 0.8;
     const sectionTop = skillsSectionForAnimation.getBoundingClientRect().top;
 
-    // Cek apakah bagian atas section 'skills' sudah masuk ke 80% layar
-    // DAN apakah animasinya belum pernah berjalan
     if (sectionTop < triggerBottom && !animationHasRun) {
         
         allProgressBarsForAnimation.forEach(bar => {
             let targetWidth = '0%';
-            // Pastikan nilai persen ini sudah benar
             if (bar.classList.contains('html-css')) targetWidth = '90%';
             else if (bar.classList.contains('javascript')) targetWidth = '80%';
             else if (bar.classList.contains('cpp')) targetWidth = '75%';
@@ -90,15 +82,11 @@ function runSkillAnimation() {
             bar.style.width = targetWidth;
         });
         
-        animationHasRun = true; // Tandai bahwa animasi sudah berjalan
+        animationHasRun = true;
     }
 }
 
-// Pasang event listener untuk scroll
 window.addEventListener('scroll', runSkillAnimation);
-
-// Jalankan juga saat halaman baru dimuat, 
-// (siapa tahu section-nya sudah terlihat pas di-load)
 document.addEventListener('DOMContentLoaded', runSkillAnimation);
 
 // Carousel
@@ -157,10 +145,8 @@ const navItems = document.getElementById('nav-items-container');
 
 if (menuToggle && navItems) {
     menuToggle.addEventListener('click', () => {
-        // Tampilkan/sembunyikan menu
         navItems.classList.toggle('show');
 
-        // Ganti ikon (hamburger <-> 'X')
         const icon = menuToggle.querySelector('i');
         if (icon) {
             icon.classList.toggle('fa-bars');
